@@ -11,6 +11,7 @@ export default function Intro() {
   return (
     <section className="mb-28 max-w-[55rem] sm:mb-0 text-justify">
       <div className="flex items-center justify-center">
+        {/* SVG */}
         <div className="relative">
           <motion.svg
             initial={{ opacity: 0, scale: 0 }}
@@ -44,7 +45,9 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
-      <motion.p
+
+      {/* Hero Content */}
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,15 +56,24 @@ export default function Intro() {
         <span className="font-bold">front-end developer.</span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
-      <div className="flex flex-col sm:flex-row items-center justify-between  px-4">
+      </motion.h1>
+
+      {/* Links & Icons */}
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-between px-4 space-y-4 sm:space-y-0 sm:space-x-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        {/* Contact */}
         <Link
           href="#contact"
-          className="bg-gray-900 text-white px-7 py-3 flex items-center gap-6 rounded-full"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-6 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
-          Contact Me <BsArrowRight />
+          Contact Me{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
-
+        {/* Linkedin */}
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://linkedin.com"
@@ -69,7 +81,7 @@ export default function Intro() {
         >
           <BsLinkedin />
         </a>
-
+        {/* Github */}
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com"
@@ -77,13 +89,16 @@ export default function Intro() {
         >
           <FaGithubSquare />
         </a>
+        {/* Download CV */}
         <a
-          href=""
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full"
+          href="/CV.pdf"
+          download
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
-          Download CV <HiDownload />
+          Download CV{" "}
+          <HiDownload className="opacity=60 group-hover:translate-y-2 transition " />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
