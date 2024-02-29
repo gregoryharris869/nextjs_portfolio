@@ -9,7 +9,7 @@ import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[55rem] sm:mb-0 text-justify">
+    <section className="mb-28 max-w-[44rem] sm:mb-0 text-justify">
       <div className="flex items-center justify-center">
         {/* SVG */}
         <div className="relative">
