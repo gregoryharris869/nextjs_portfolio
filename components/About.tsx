@@ -10,10 +10,10 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="mb-28 max-w-[45rem] text-justify leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem]  leading-8 sm:mb-40 scroll-mt-28"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3 ">
+      <p className="mb-3 hyphens-auto text-justify">
         As a frontend developer, I thrive on crafting elegant interfaces that
         captivate users. With a blend of aesthetics and functionality, I turn
         designs into seamless digital experiences, from structured HTML to
