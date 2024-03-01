@@ -1,4 +1,10 @@
 {
-  "cSpell.ignoreWords": ["bootcamp", "corpcomment", "rmtdev", "wordanalytics"],
+  "cSpell.ignoreWords": [
+    "bootcamp",
+    "clsx",
+    "corpcomment",
+    "rmtdev",
+    "wordanalytics"
+  ],
   "cSpell.words": ["activesection"]
 }
