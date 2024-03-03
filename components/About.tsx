@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function About() {
+  const { ref, inView } = useInView();
   return (
     <motion.section
+      ref={ref}
       id="about"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
