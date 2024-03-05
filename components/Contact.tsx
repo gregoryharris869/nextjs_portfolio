@@ -4,14 +4,19 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import { FaPaperPlane } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
   return (
-    <section
+    <motion.section
       ref={ref}
       id="contact"
       className="mb-20 sm:mb-28 w-[min(100%,45rem)] items-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
       <p className="text-gray-700 mt-6 text-center">
@@ -21,21 +26,26 @@ export default function Contact() {
         </a>{" "}
         or through this form.
       </p>
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form
+        action={(formData) => {
+          console.log(formData);
+        }}
+        className="mt-10 flex flex-col dark:text-black"
+      >
         <input
           className="h-14 px-4 rounded-lg borderBlack"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
-          placeholder="Your email"
+          placeholder="Your email."
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4"
           name="message"
-          placeholder="Your message"
+          placeholder="Your message."
           required
-          maxLength={5000}
+          maxLength={500}
         />
         <button
           type="submit"
@@ -45,6 +55,6 @@ export default function Contact() {
           <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
         </button>
       </form>
-    </section>
+    </motion.section>
   );
 }
