@@ -28,7 +28,8 @@ export default function Contact() {
       </p>
       <form
         action={(formData) => {
-          console.log(formData);
+          console.log(formData.get("senderEmail"));
+          console.log(formData.get("message"));
         }}
         className="mt-10 flex flex-col dark:text-black"
       >
