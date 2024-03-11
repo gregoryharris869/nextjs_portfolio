@@ -4,6 +4,7 @@
     "clsx",
     "corpcomment",
     "rmtdev",
+    "tailwindcss",
     "wordanalytics"
   ],
   "cSpell.words": ["activesection"]
